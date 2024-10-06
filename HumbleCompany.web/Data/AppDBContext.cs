@@ -24,7 +24,7 @@ namespace HumbleCompany.web.Data
                 .ValueGeneratedOnAdd();
 
                 tb.Property(col => col.Id).HasMaxLength(50);
-                //tb.Property(col => col.Email).HasMaxLength(50);
+                tb.Property(col => col.Email).HasMaxLength(50);
 
 
             });
