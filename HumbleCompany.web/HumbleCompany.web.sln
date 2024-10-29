@@ -5,13 +5,13 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleCompany.web", "HumbleCompany.web.csproj", "{6FAD7980-FCDC-43D8-A662-2AB59F1AABC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleCompany.API", "..\WebApplication1\HumbleCompany.API.csproj", "{6F43ECB3-D54B-434C-BDFA-65A2E72DF593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleCompany.API", "..\WebApplication1\HumbleCompany.API.csproj", "{6F43ECB3-D54B-434C-BDFA-65A2E72DF593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleCompany.Domain", "..\HumbleCompany.Domain\HumbleCompany.Domain.csproj", "{0E4C31C9-DD43-4B73-9D0D-93908610329C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleCompany.Domain", "..\HumbleCompany.Domain\HumbleCompany.Domain.csproj", "{0E4C31C9-DD43-4B73-9D0D-93908610329C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleCompany.Application", "..\HumbleCompany.Application\HumbleCompany.Application.csproj", "{62B8EC08-703A-4DAC-94E0-C46DB7B11C12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleCompany.Application", "..\HumbleCompany.Application\HumbleCompany.Application.csproj", "{62B8EC08-703A-4DAC-94E0-C46DB7B11C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumbleCompany.Infraestructure", "..\HumbleCompany.Infraestructure\HumbleCompany.Infraestructure.csproj", "{042EBC4C-797D-40A6-B0B6-A400BCD367CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HumbleCompany.Infraestructure", "..\HumbleCompany.Infraestructure\HumbleCompany.Infraestructure.csproj", "{042EBC4C-797D-40A6-B0B6-A400BCD367CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
