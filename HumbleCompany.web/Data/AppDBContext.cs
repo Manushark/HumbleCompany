@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using HumbleCompany.web.Models;
+using HumbleCompany.Domain;
 
 namespace HumbleCompany.web.Data
 {
     public class AppDBContext : DbContext
     {
+
         public AppDBContext(DbContextOptions<AppDBContext> Options) : base(Options) 
         {
             
@@ -15,13 +16,12 @@ namespace HumbleCompany.web.Data
         {
             //base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Empleado>(tb =>
+            modelBuilder.Entity<Empleado>(static tb =>
             {
                 tb.HasKey(col => col.Id);
 
                 tb.Property(col => col.Id)
-                .UseIdentityColumn()
-                .ValueGeneratedOnAdd();
+                  .ValueGeneratedOnAdd();
 
                 tb.Property(col => col.Id).HasMaxLength(50);
                 tb.Property(col => col.Email).HasMaxLength(50);

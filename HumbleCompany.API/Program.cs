@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using HumbleCompany.API.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<HumbleCompanyAPIContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HumbleCompanyAPIContext") ?? throw new InvalidOperationException("Connection string 'HumbleCompanyAPIContext' not found.")));
 
 // Add services to the container.
 

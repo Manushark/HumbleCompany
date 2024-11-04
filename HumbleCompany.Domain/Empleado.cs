@@ -1,5 +1,8 @@
-﻿namespace HumbleCompany.web.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace HumbleCompany.Domain
 {
+
     public class Empleado
     {
         public int Id { get; set; }
@@ -9,4 +12,5 @@
 
         public bool IsActive { get; set; }
     }
- }
+    
+}

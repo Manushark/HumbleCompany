@@ -1,32 +1,24 @@
-﻿ using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using HumbleCompany.web.Data;
-using HumbleCompany.web.Models;
+﻿using HumbleCompany.API.Data;
 using HumbleCompany.Domain;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace HumbleCompany.web.Controllers
+namespace HumbleCompany.API.Controllers
 {
-    public class employeesController : Controller
+    public class EmpleadoesController : Controller
     {
-        private readonly AppDBContext _context;
+        private readonly HumbleCompanyAPIContext _context;
 
-        public employeesController(AppDBContext context)
+        public EmpleadoesController(HumbleCompanyAPIContext context)
         {
             _context = context;
         }
 
-        // GET: employees
         public async Task<IActionResult> Index()
         {
             return View(await _context.Empleado.ToListAsync());
         }
 
-        // GET: employees/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,15 +36,13 @@ namespace HumbleCompany.web.Controllers
             return View(empleado);
         }
 
-        // GET: employees/Create
+
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: employees/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Email,contractDate,IsActive")] Empleado empleado)
@@ -66,7 +56,6 @@ namespace HumbleCompany.web.Controllers
             return View(empleado);
         }
 
-        // GET: employees/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -82,9 +71,7 @@ namespace HumbleCompany.web.Controllers
             return View(empleado);
         }
 
-        // POST: employees/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,contractDate,IsActive")] Empleado empleado)
@@ -117,7 +104,7 @@ namespace HumbleCompany.web.Controllers
             return View(empleado);
         }
 
-        // GET: employees/Delete/5
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,7 +122,6 @@ namespace HumbleCompany.web.Controllers
             return View(empleado);
         }
 
-        // POST: employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
